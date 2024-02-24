@@ -317,7 +317,7 @@ template {
   --clr--dark-slate-grey: hsl(234, 29%, 20%);
   --clr--charcoal-grey: hsl(235, 18%, 26%);
   --clr--grey: hsl(231, 7%, 60%);
-  --clr--white: White: hsl(0, 0%, 100%) ;
+  --clr--white: hsl(0, 0%, 100%);
 }
 
 :root {
@@ -328,4 +328,72 @@ template {
   /* Font Weights */
   --fw--bold1: 400;
   --fw--bold2: 700;
+}
+
+body {
+  font-family: var(--ff--Primary);
+  font-size: var(--fs--regular);
+  color: var(--clr--dark-slate-grey);
+  overflow-y: hidden;
+}
+body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content auto;
+}
+.card__image img {
+  width: 100%;
+}
+.card__info {
+  line-height: 1.5rem;
+  margin: 1rem 1.5rem;
+}
+.card__info h1 {
+  font-size: 2.5rem;
+}
+.card__info ul {
+  margin: 1.5rem 0;
+}
+.card__info ul li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.card__info ul li img {
+  align-self: flex-start;
+}
+.card__info form {
+  display: grid;
+}
+.card__info form label {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: var(--fw--bold2);
+}
+.card__info form input,
+.card__info form button {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: var(--fw--bold2);
+}
+.card__info form input {
+  margin-bottom: 1rem;
+  border: 1px solid var(--clr--grey);
+  outline: none;
+}
+.card__info form button {
+  cursor: pointer;
+  background-color: var(--clr--dark-slate-grey);
+  color: var(--clr--white);
 }/*# sourceMappingURL=style.css.map */
