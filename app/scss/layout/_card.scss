@@ -1,3 +1,4 @@
+@use "../layout/util/" as u;
 .card {
   display: grid;
   grid-template-columns: 1fr;
@@ -51,6 +52,27 @@
         cursor: pointer;
         background-color: var(--clr--dark-slate-grey);
         color: var(--clr--white);
+      }
+    }
+  }
+
+  @include u.breakpoints(medium) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 1.5rem;
+    margin: 1rem;
+    align-items: center;
+    background-color: var(--clr--white);
+    border-radius: 2rem;
+    &__image {
+      order: 2;
+    }
+    &__info {
+      order: 1;
+      h1 {
+        line-height: 3rem;
       }
     }
   }

@@ -345,6 +345,14 @@ body ul {
   min-height: 100vh;
   display: grid;
 }
+@media only screen and (min-width: 43.75em) {
+  .container {
+    background-color: var(--clr--charcoal-grey);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+}
 
 .card {
   display: grid;
@@ -396,4 +404,26 @@ body ul {
   cursor: pointer;
   background-color: var(--clr--dark-slate-grey);
   color: var(--clr--white);
+}
+@media only screen and (min-width: 43.75em) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 1.5rem;
+    margin: 1rem;
+    align-items: center;
+    background-color: var(--clr--white);
+    border-radius: 2rem;
+  }
+  .card__image {
+    order: 2;
+  }
+  .card__info {
+    order: 1;
+  }
+  .card__info h1 {
+    line-height: 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
