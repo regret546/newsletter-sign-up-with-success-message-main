@@ -1,6 +1,7 @@
 @use "../layout/util/" as u;
 .card {
   display: grid;
+  display: none;
   grid-template-columns: 1fr;
   grid-template-rows: min-content auto;
   &__image {

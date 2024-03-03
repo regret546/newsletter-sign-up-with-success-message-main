@@ -1,0 +1,19 @@
+.success-card {
+  display: grid;
+  max-width: 350px;
+  background-color: var(--clr--white);
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content auto;
+  place-self: center;
+  text-align: left;
+  padding: 2rem;
+  border-radius: 2rem;
+
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
