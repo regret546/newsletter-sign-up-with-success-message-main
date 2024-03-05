@@ -10,3 +10,10 @@ $breakpoints-up: (
     @content;
   }
 }
+
+@mixin ButtonAndInputStyle {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: var(--fw--bold2);
+}

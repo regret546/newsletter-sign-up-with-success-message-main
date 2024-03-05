@@ -38,10 +38,7 @@
 
       input,
       button {
-        padding: 1.2rem;
-        border: none;
-        border-radius: 0.5rem;
-        font-weight: var(--fw--bold2);
+        @include u.ButtonAndInputStyle;
       }
 
       input {
@@ -53,6 +50,10 @@
         cursor: pointer;
         background-color: var(--clr--dark-slate-grey);
         color: var(--clr--white);
+
+        &:hover {
+          background-color: var(--clr--tomato);
+        }
       }
     }
   }
