@@ -16,6 +16,8 @@ const userInput = document.querySelector("#emailInput");
 const submitBtn = document.querySelector("#submitBtn");
 const dismissBtn = document.querySelector("#dismissBtn");
 const emailInput = document.querySelector("#emailInput");
+const signUpCard = document.querySelector("#signUpCard");
+const successCard = document.querySelector("#successCard");
 
 function validateEmailInputs() {
   const errorMessage = document.querySelector("#errorMsg");
@@ -30,10 +32,18 @@ function validateEmailInputs() {
   } else {
     errorMessage.innerText = "";
     errorMessage.classList.remove("errorMessageTrue");
+    signUpCard.style.display = "none";
+    successCard.style.display = "grid";
   }
 }
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   validateEmailInputs();
+});
+
+dismissBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  successCard.style.display = "none";
+  signUpCard.style.display = "grid";
 });

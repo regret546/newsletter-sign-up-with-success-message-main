@@ -1,7 +1,6 @@
 @use "../layout/util/" as u;
 
 .success-card {
-  display: grid;
   display: none;
   height: 90dvh;
   margin: auto 0;
@@ -23,12 +22,16 @@
   }
 
   button {
+    @include u.ButtonAndInputStyle;
     align-self: self-end;
     margin-top: 2rem;
-    @include u.ButtonAndInputStyle;
     cursor: pointer;
     background-color: var(--clr--dark-slate-grey);
     color: var(--clr--white);
+
+    &:hover {
+      background-color: var(--clr--tomato);
+    }
   }
 
   @include u.breakpoints(medium) {
