@@ -2,6 +2,7 @@
 
 .success-card {
   display: grid;
+  display: none;
   height: 90dvh;
   margin: auto 0;
   max-width: 350px;
@@ -28,11 +29,6 @@
     cursor: pointer;
     background-color: var(--clr--dark-slate-grey);
     color: var(--clr--white);
-    transition: background-color 0.2s linear;
-
-    &:hover {
-      background-color: var(--clr--tomato);
-    }
   }
 
   @include u.breakpoints(medium) {

@@ -16,4 +16,10 @@ $breakpoints-up: (
   border: none;
   border-radius: 0.5rem;
   font-weight: var(--fw--bold2);
+  transition: background-color 0.2s linear;
+  button {
+    &:hover {
+      background-color: var(--clr--tomato);
+    }
+  }
 }

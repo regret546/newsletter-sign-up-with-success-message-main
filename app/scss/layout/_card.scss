@@ -1,7 +1,7 @@
 @use "../layout/util/" as u;
 .card {
   display: grid;
-  display: none;
+
   grid-template-columns: 1fr;
   grid-template-rows: min-content auto;
   &__image {
@@ -29,10 +29,10 @@
     }
     form {
       display: grid;
+
       label {
         margin-bottom: 0.5rem;
         font-size: 0.8rem;
-
         font-weight: var(--fw--bold2);
       }
 
@@ -40,11 +40,15 @@
       button {
         @include u.ButtonAndInputStyle;
       }
-
-      input {
+      .inputArea {
+        position: relative;
+        display: grid;
         margin-bottom: 1rem;
-        border: 1px solid var(--clr--grey);
-        outline: none;
+        font-weight: var(--fw--bold2);
+        input {
+          border: 1px solid var(--clr--grey);
+          outline: none;
+        }
       }
       button {
         cursor: pointer;
@@ -54,6 +58,20 @@
         &:hover {
           background-color: var(--clr--tomato);
         }
+      }
+      .errorMessage {
+        visibility: hidden;
+        position: absolute;
+        font-size: 0.8rem;
+        top: -35px;
+        right: 5px;
+        color: var(--clr--tomato);
+        opacity: 0;
+        transition: visibility 0.3s linear, opacity 0.3s linear;
+      }
+      .errorMessageTrue {
+        visibility: visible;
+        opacity: 1;
       }
     }
   }

@@ -356,7 +356,6 @@ body ul {
 
 .card {
   display: grid;
-  display: none;
   grid-template-columns: 1fr;
   grid-template-rows: min-content auto;
 }
@@ -395,9 +394,19 @@ body ul {
   border: none;
   border-radius: 0.5rem;
   font-weight: var(--fw--bold2);
+  transition: background-color 0.2s linear;
 }
-.card__info form input {
+.card__info form input button:hover,
+.card__info form button button:hover {
+  background-color: var(--clr--tomato);
+}
+.card__info form .inputArea {
+  position: relative;
+  display: grid;
   margin-bottom: 1rem;
+  font-weight: var(--fw--bold2);
+}
+.card__info form .inputArea input {
   border: 1px solid var(--clr--grey);
   outline: none;
 }
@@ -408,6 +417,20 @@ body ul {
 }
 .card__info form button:hover {
   background-color: var(--clr--tomato);
+}
+.card__info form .errorMessage {
+  visibility: hidden;
+  position: absolute;
+  font-size: 0.8rem;
+  top: -35px;
+  right: 5px;
+  color: var(--clr--tomato);
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+.card__info form .errorMessageTrue {
+  visibility: visible;
+  opacity: 1;
 }
 @media only screen and (min-width: 43.75em) {
   .card {
@@ -434,6 +457,7 @@ body ul {
 
 .success-card {
   display: grid;
+  display: none;
   height: 90dvh;
   margin: auto 0;
   max-width: 350px;
@@ -459,12 +483,12 @@ body ul {
   border: none;
   border-radius: 0.5rem;
   font-weight: var(--fw--bold2);
+  transition: background-color 0.2s linear;
   cursor: pointer;
   background-color: var(--clr--dark-slate-grey);
   color: var(--clr--white);
-  transition: background-color 0.2s linear;
 }
-.success-card button:hover {
+.success-card button button:hover {
   background-color: var(--clr--tomato);
 }
 @media only screen and (min-width: 43.75em) {

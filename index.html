@@ -58,13 +58,17 @@
               much more!
             </li>
           </ul>
-          <form action="">
+          <form action="#">
             <label for="email">Email address</label>
-            <input type="email" name="email" id="" />
-            <button>Subscribe to monthly newsletter</button>
+            <div class="inputArea">
+              <input name="email" id="emailInput" />
+              <p class="errorMessage" id="errorMsg"></p>
+            </div>
+            <button id="submitBtn">Subscribe to monthly newsletter</button>
           </form>
         </section>
       </main>
+
       <article class="success-card">
         <div>
           <img src="/assets/images/icon-success.svg" alt="Success Icon" />
@@ -75,7 +79,7 @@
             Dismiss message
           </p>
         </div>
-        <button class="btn-dismiss">Dismiss Message</button>
+        <button id="dismissBtn">Dismiss Message</button>
       </article>
     </div>
     <div class="attribution">
