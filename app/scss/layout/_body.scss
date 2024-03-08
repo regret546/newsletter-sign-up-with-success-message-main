@@ -1,3 +1,5 @@
+@use "../layout/util/" as u;
+
 body {
   font-family: var(--ff--Primary);
   font-size: var(--fs--regular);
@@ -9,11 +11,24 @@ body {
   }
 
   .attribution {
-    font-size: 1rem;
+    font-size: 0.7rem;
     text-align: center;
-    color: var(--clr--white);
+    color: var(--clr--dark-slate-grey);
+
+    a {
+      color: var(--clr--tomato);
+    }
   }
-  .attribution a {
-    color: var(--clr--tomato);
+
+  @include u.breakpoints(medium) {
+    .attribution {
+      font-size: 1rem;
+      text-align: center;
+      color: var(--clr--white);
+
+      a {
+        color: var(--clr--tomato);
+      }
+    }
   }
 }
