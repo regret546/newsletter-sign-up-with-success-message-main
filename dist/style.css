@@ -360,6 +360,9 @@ body .attribution a {
 }
 
 .container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   min-height: 100vh;
   display: grid;
 }
